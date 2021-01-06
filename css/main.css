@@ -1,0 +1,295 @@
+@font-face {
+  font-family: 'CoreSansG';
+  src: url("../fonts/CoreSansG-Regular.woff2") format("woff2"), url("../fonts/CoreSansG-Regular.woff") format("woff"), url("../fonts/CoreSansG-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'CoreSansG';
+  src: url("../fonts/CoreSansG-Light.woff2") format("woff2"), url("../fonts/CoreSansG-Light.woff") format("woff"), url("../fonts/CoreSansG-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'CoreSansG';
+  src: url("../fonts/CoreSansG-Medium.woff2") format("woff2"), url("../fonts/CoreSansG-Medium.woff") format("woff"), url("../fonts/CoreSansG-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'CoreSansG';
+  src: url("../fonts/CoreSansG-Bold.woff2") format("woff2"), url("../fonts/CoreSansG-Bold.woff") format("woff"), url("../fonts/CoreSansG-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+* {
+  padding: 0;
+  margin: 0; }
+  * a {
+    text-decoration: none; }
+
+.container {
+  padding: 0 20px;
+  margin: auto; }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 960px; } }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 945px; } }
+  @media (max-width: 590px) {
+    .container {
+      padding: 0 20px;
+      max-width: 550px; } }
+  @media (max-width: 400px) {
+    .container {
+      padding: 0 15px; } }
+
+.hidden {
+  display: none !important; }
+
+.visual {
+  display: block !important; }
+
+.error-validate {
+  border: 1px solid #f06979 !important;
+  color: #f06979 !important; }
+
+.header {
+  height: 100px;
+  background: linear-gradient(90deg, #5A4BE6 0.26%, #73AFF7 47.1%, #93D0D9 99.8%); }
+  @media (max-width: 576px) {
+    .header {
+      height: 60px; } }
+  .header .container {
+    display: flex;
+    margin: auto;
+    padding: 0 30px;
+    height: 100px; }
+    @media (max-width: 576px) {
+      .header .container {
+        padding: 0 10px;
+        height: 60px; } }
+    .header .container .label {
+      color: #CFE0F4;
+      font-size: 33px;
+      justify-content: center;
+      width: 57%;
+      font-family: CoreSansG;
+      margin: auto 0 auto 0;
+      text-align: right; }
+      @media (max-width: 576px) {
+        .header .container .label {
+          font-size: 28px;
+          text-align: left; } }
+    .header .container .lang {
+      display: flex;
+      justify-content: flex-end;
+      width: 40%;
+      font-size: 16px;
+      margin: auto; }
+      .header .container .lang .line {
+        display: block;
+        border-left: 2px solid #CFE0F4;
+        height: 16px;
+        position: relative;
+        top: 2px; }
+      .header .container .lang__item {
+        color: #CFE0F4;
+        padding: 0 10px;
+        font-family: CoreSansG;
+        transition: all 0.3s ease-in-out;
+        font-weight: 400; }
+        .header .container .lang__item:hover {
+          transition: all 0.3s ease-in;
+          cursor: pointer;
+          color: #6188CA; }
+
+.position-input {
+  position: relative;
+  max-width: 100%; }
+  .position-input .label {
+    font-size: 16px;
+    color: #ccc;
+    position: absolute;
+    top: 49%;
+    left: 20px;
+    font-family: CoreSansG; }
+    @media (max-width: 400px) {
+      .position-input .label {
+        font-size: 3.5vw;
+        top: 52%; } }
+  .position-input .form-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 90%;
+    color: #808080;
+    caret-color: #6188CA;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    font-size: 19px;
+    outline: 0;
+    font-family: CoreSansG;
+    padding: 20px 0 15px 20px; }
+
+.container .head {
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: #000000;
+  padding: 70px 0 30px 0;
+  font-family: CoreSansG;
+  font-weight: 300; }
+  @media (max-width: 767px) {
+    .container .head {
+      font-size: 27px;
+      padding: 40px 0 20px 0; } }
+  @media (max-width: 576px) {
+    .container .head {
+      font-size: 20px;
+      padding: 20px 0 10px 0; } }
+
+.container .panel {
+  border: 1px solid #CFE0F4;
+  border-radius: 4px;
+  min-height: 450px; }
+  @media (max-width: 767px) {
+    .container .panel {
+      min-height: 350px; } }
+  .container .panel .form {
+    max-width: 45%;
+    margin: auto;
+    padding-top: 40px; }
+    @media (max-width: 992px) {
+      .container .panel .form {
+        max-width: 50%; } }
+    @media (max-width: 767px) {
+      .container .panel .form {
+        max-width: 60%;
+        padding-top: 20px; } }
+    @media (max-width: 576px) {
+      .container .panel .form {
+        padding-top: 10px;
+        max-width: 90%;
+        margin: auto 20px auto 35px; } }
+    @media (max-width: 380px) {
+      .container .panel .form {
+        margin: auto 20px auto 25px; } }
+    .container .panel .form .text-number-card {
+      padding: 10px 0;
+      font-size: 18px;
+      font-family: CoreSansG;
+      font-weight: normal; }
+    .container .panel .form .position-input .payment-system-logo {
+      position: absolute;
+      right: 28px;
+      top: 0;
+      display: flex;
+      justify-content: flex-end;
+      margin: auto;
+      align-items: center;
+      height: 100%;
+      width: 15%; }
+      @media (max-width: 370px) {
+        .container .panel .form .position-input .payment-system-logo {
+          right: 5px;
+          top: -49px !important; } }
+      .container .panel .form .position-input .payment-system-logo .icon-card {
+        width: 40px;
+        height: 40px;
+        display: none; }
+      .container .panel .form .position-input .payment-system-logo .icon-master-card {
+        background: url("../img/mastercard.png") center center/contain no-repeat; }
+      .container .panel .form .position-input .payment-system-logo .icon-visa-card {
+        background: url("../img/visacard.png") center center/contain no-repeat; }
+    .container .panel .form .position-validity {
+      display: flex;
+      justify-content: space-between;
+      width: 94%; }
+      @media (max-width: 319px) {
+        .container .panel .form .position-validity {
+          width: 100%;
+          flex-direction: column;
+          padding-bottom: 20px; } }
+      .container .panel .form .position-validity .validity {
+        width: 46%;
+        padding: 25px 0 10px 0; }
+        @media (max-width: 319px) {
+          .container .panel .form .position-validity .validity {
+            width: 100%;
+            padding: 17px 0 0 0; } }
+    .container .panel .form .error-block {
+      width: 95%;
+      min-height: 20px; }
+      .container .panel .form .error-block .error__text {
+        color: #f06979;
+        font-size: 14px;
+        font-family: CoreSansG;
+        display: none;
+        padding: 0 0 10px 0; }
+    .container .panel .form .information {
+      font-family: CoreSansG;
+      font-size: 16px;
+      width: 95%;
+      color: #808080;
+      text-align: justify; }
+      @media (max-width: 319px) {
+        .container .panel .form .information {
+          width: 100%; } }
+    .container .panel .form .btn-position {
+      margin: 20px 0;
+      width: 95%; }
+      @media (max-width: 319px) {
+        .container .panel .form .btn-position {
+          width: 100%; } }
+
+.btn-primary {
+  width: 100%;
+  border: none;
+  color: white !important;
+  padding-top: 20px;
+  border-radius: 4px;
+  padding-bottom: 19px;
+  background-size: 1px 80px;
+  transition: all 0.4s ease;
+  position: relative;
+  font: 400 16px/19px CoreSansG;
+  z-index: 1;
+  background: linear-gradient(167.72deg, #5A4BE6 -33.07%, #73AFF7 48.35%, #93D0D9 139.94%) !important;
+  cursor: pointer;
+  min-height: 56px; }
+  .btn-primary::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    background-image: linear-gradient(351.95deg, #5A4BE6 -48.61%, #73AFF7 33.69%, #93D0D9 126.27%);
+    z-index: -1;
+    transition: opacity 0.4s linear;
+    opacity: 0; }
+  .btn-primary:hover::before {
+    opacity: 1; }
+  .btn-primary:focus {
+    opacity: 1;
+    transition: all 0.4s ease-out;
+    outline: none; }
+
+.info-credit {
+  padding: 10px 0 20px 0; }
+  .info-credit__text {
+    font-family: CoreSansG;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 0;
+    color: #808080; }
+
+.number-card-user {
+  display: none; }
