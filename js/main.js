@@ -13893,6 +13893,7 @@ return jQuery;
         })
     };
     const checkDate = function (e) {
+	    alert(e.target.value)
         const filterNumber = e.target.value.split('_')[0].toString().replace('/', '');
         validationDateCard(filterNumber);
         if (filterNumber.length === 4) {
