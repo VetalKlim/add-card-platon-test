@@ -13887,13 +13887,15 @@ return jQuery;
             checkCard(e)
         });
         $('#card_exp_year').on('change', function (e) {
+		alert(e.target.value)
             checkDate(e)
         }).on('input', function (e) {
+		alert(e.target.value)
             checkDate(e)
         })
     };
     const checkDate = function (e) {
-	    alert(e.target.value)
+	   
         const filterNumber = e.target.value.split('_')[0].toString().replace('/', '');
         validationDateCard(filterNumber);
         if (filterNumber.length === 4) {
