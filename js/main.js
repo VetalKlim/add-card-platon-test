@@ -13834,20 +13834,20 @@ return jQuery;
                 $('#numberCard').addClass('error-validate');
             }
         }).on('focus', function (e) {
-                if (e.target.value.split('_')[0].toString().replace('/', '').length === 19) {
-                    // // $('#numberCard').val(e.target.value.substring(0, e.target.value.length - 1));
-                    // $('#numberCard').addClass('error-validate');
-                    // btnCard = false;
-                    $('#numberCard').removeClass('error-validate');
-                    console.log(e)
-                    if (e.which === 27 || e.which === 8) {
-                        console.log('sss')
-                        $('#numberCard').val(e.target.value.substring(0, e.target.value.length - 1));
-                        // Close my modal window
-                    }
-                } else {
-                    $('#numberCard').addClass('error-validate');
-                }
+                // if (e.target.value.split('_')[0].toString().replace('/', '').length === 19) {
+                //     // // $('#numberCard').val(e.target.value.substring(0, e.target.value.length - 1));
+                //     // $('#numberCard').addClass('error-validate');
+                //     // btnCard = false;
+                //     $('#numberCard').removeClass('error-validate');
+                //     console.log(e)
+                //     if (e.which === 27 || e.which === 8) {
+                //         console.log('sss')
+                //         $('#numberCard').val(e.target.value.substring(0, e.target.value.length - 1));
+                //         // Close my modal window
+                //     }
+                // } else {
+                //     $('#numberCard').addClass('error-validate');
+                // }
             }
         ).on('keydown', function (e) {
         });
