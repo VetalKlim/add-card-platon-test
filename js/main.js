@@ -13835,15 +13835,14 @@ return jQuery;
             }
         }).on('focus', function (e) {
             if (e.target.value.split('_')[0].toString().replace('/', '').length === 19) {
-                $('#numberCard').val('');
-                $('#numberCard').addClass('error-validate');
+                $('#numberCard').val('').addClass('error-validate');
+                checkPaymentSystem(e.target.value.split('_')[0].toString().replace('/', ''))
                 btnCard = false;
             }
         });
         $('#year-block').on('click', function () {
             $('#label-validity').removeClass('visual').addClass('hidden');
-            $('#card_exp_year').removeClass('error-validate');
-            $('#card_exp_year').focus()
+            $('#card_exp_year').focus().removeClass('error-validate');
         });
         $('#card_exp_year').on('focus', function (e) {
             $('#label-validity').removeClass('visual').addClass('hidden');
