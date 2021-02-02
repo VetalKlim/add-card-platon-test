@@ -13910,7 +13910,6 @@ return jQuery;
         validationDateCard(filterNumber);
         if (filterNumber.length === 0) {
             $('#numberCard').focus();
-            return;
         } else if (filterNumber.length === 4) {
             $('#password_cvv').focus();
             btnDate = true;
