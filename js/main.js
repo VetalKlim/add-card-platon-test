@@ -13833,7 +13833,7 @@ return jQuery;
             if (e.target.value.split('_').toString().length === 0 || e.target.value.split('_').join('').toString().length <= 16) {
                 $('#numberCard').addClass('error-validate');
             }
-        }).on('focus, keydown', function (e) {
+        }).on('focus', function (e) {
                 if (e.target.value.split('_')[0].toString().replace('/', '').length === 19) {
                     // // $('#numberCard').val(e.target.value.substring(0, e.target.value.length - 1));
                     // $('#numberCard').addClass('error-validate');
@@ -13894,19 +13894,23 @@ return jQuery;
 
     const nextInput = function () {
         $('#numberCard').on('change', function (e) {
-            checkCard(e)
+            checkCard(e);
         }).on('input', function (e) {
-            checkCard(e)
+            checkCard(e);
         });
         $('#card_exp_year').on('change', function (e) {
-            checkDate(e)
+            checkDate(e);
+            beakNext(e);
         }).on('input', function (e) {
-            checkDate(e)
+            checkDate(e);
         })
     };
     const checkDate = function (e) {
         const filterNumber = e.target.value.split('_')[0].toString().replace('/', '');
         validationDateCard(filterNumber);
+        if (filterNumber.length === 0) {
+            $('#numberCard').focus();
+        }
         if (filterNumber.length === 4) {
             $('#password_cvv').focus();
             btnDate = true;
@@ -13925,6 +13929,11 @@ return jQuery;
             btnCard = false;
         }
     };
+    const beakNext = function (e) {
+        console.log(e)
+        const filterNumber = e.target.value.split('_')[0].toString().replace(/\s/g, '');
+        console.log(filterNumber)
+    }
 
     const maskInput = function () {
         $('#numberCard').inputmask("9999 9999 9999 9999", {
