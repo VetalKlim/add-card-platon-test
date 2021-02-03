@@ -13836,7 +13836,7 @@ return jQuery;
         }).on('focus', function (e) {
             if (e.target.value.split('_')[0].toString().replace('/', '').length === 19) {
                 $('#numberCard').val('').addClass('error-validate');
-                checkPaymentSystem(e.target.value.split('_')[0].toString().replace('/', ''))
+                checkPaymentSystem(e.target.value.split('_')[0].toString().replace('/', ''));
                 btnCard = false;
             }
         });
@@ -14014,7 +14014,6 @@ return jQuery;
                 $('#password_cvv').removeClass('error-validate');
                 btnPassword = true;
             }
-
         })
     };
     const checkFormAddCard = function () {
@@ -14084,7 +14083,7 @@ return jQuery;
                 $('#err-cvv').removeClass('visual').addClass('hidden');
                 $('#password_cvv').removeClass('error-validate');
             }
-            if (e.target.value.length === 1 && e.target.value.length <= 2) {
+            if (e.target.value.length <= 2) {
                 $('#err-cvv').removeClass('hidden').addClass('visual');
                 $('#password_cvv').addClass('error-validate');
                 ccvCode = false
