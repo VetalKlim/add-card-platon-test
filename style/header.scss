@@ -1,0 +1,66 @@
+@import "variables";
+
+.header {
+  height: 100px;
+  background: $header-color;
+  @media (max-width: $sm) {
+    height: 60px;
+  }
+
+  .container {
+    display: flex;
+    margin: auto;
+    padding: 0 30px;
+    height: 100px;
+    @media (max-width: $sm) {
+      padding: 0 10px;
+      height: 60px;
+    }
+
+    .label {
+      color: $grey1;
+      font-size: 33px;
+      justify-content: center;
+      width: 57%;
+      font-family: $mainFont;
+      margin: auto 0 auto 0;
+      text-align: right;
+      @media (max-width: $sm) {
+        font-size: 28px;
+        text-align: left;
+      }
+    }
+
+    .lang {
+      display: flex;
+      justify-content: flex-end;
+      width: 40%;
+      font-size: 16px;
+      margin: auto;
+
+      .line {
+        display: block;
+        border-left: 2px solid $grey1;
+        height: 16px;
+        position: relative;
+        top: 2px;
+      }
+
+      &__item {
+        color: $grey1;
+        padding: 0 10px;
+        font-family: $mainFont;
+        transition: all 0.3s ease-in-out;
+        font-weight: 400;
+
+
+        &:hover {
+          transition: all 0.3s ease-in;
+          cursor: pointer;
+          color: $blue;
+        }
+      }
+    }
+  }
+
+}

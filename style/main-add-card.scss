@@ -1,0 +1,143 @@
+@import "variables";
+
+.container {
+  .head {
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color: $black;
+    padding: 70px 0 30px 0;
+    font-family: $mainFont;
+    font-weight: 300;
+    @media (max-width: $md) {
+      font-size: 27px;
+      padding: 40px 0 20px 0;
+    }
+    @media (max-width: $sm) {
+      font-size: 20px;
+      padding: 20px 0 10px 0;
+    }
+  }
+
+  .panel {
+    border: 1px solid $grey1;
+    border-radius: 4px;
+    min-height: 450px;
+    @media (max-width: $md) {
+      min-height: 350px;
+    }
+
+    .form {
+      max-width: 45%;
+      margin: auto;
+      padding-top: 40px;
+      @media (max-width: $lg) {
+        max-width: 50%;
+      }
+      @media (max-width: $md) {
+        max-width: 60%;
+        padding-top: 20px;
+      }
+      @media (max-width: $sm) {
+        padding-top: 10px;
+        max-width: 90%;
+        margin: auto 20px auto 35px;
+      }
+      @media (max-width: 380px) {
+        margin: auto 20px auto 25px;
+      }
+
+      .text-number-card {
+        padding: 10px 0;
+        font-size: 18px;
+        font-family: $mainFont;
+        font-weight: normal;
+      }
+
+      .position-input {
+        .payment-system-logo {
+          position: absolute;
+          right: 28px;
+          top: 0;
+          display: flex;
+          justify-content: flex-end;
+          margin: auto;
+          align-items: center;
+          height: 100%;
+          width: 15%;
+          @media (max-width: 370px) {
+            right: 5px;
+            top: -49px !important;
+          }
+
+          .icon-card {
+            width: 40px;
+            height: 40px;
+            display: none;
+          }
+
+          .icon-master-card {
+            background: url('../img/mastercard.png') center center/contain no-repeat;
+          }
+
+          .icon-visa-card {
+            background: url('../img/visacard.png') center center/contain no-repeat;
+          }
+        }
+      }
+
+      .position-validity {
+        display: flex;
+        justify-content: space-between;
+        width: 94%;
+        @media (max-width: 319px) {
+          width: 100%;
+          flex-direction: column;
+          padding-bottom: 20px;
+        }
+
+        .validity {
+          width: 46%;
+          padding: 25px 0 10px 0;
+          @media (max-width: 319px) {
+            width: 100%;
+            padding: 17px 0 0 0;
+          }
+        }
+      }
+
+      .error-block {
+        width: 95%;
+        min-height: 20px;
+
+        .error__text {
+          color: $red;
+          font-size: 14px;
+          font-family: $mainFont;
+          display: none;
+          padding: 0 0 10px 0;
+        }
+      }
+
+      .information {
+        font-family: $mainFont;
+        font-size: 16px;
+        width: 95%;
+        color: $grey2;
+        text-align: justify;
+        @media (max-width: 319px) {
+          width: 100%;
+        }
+
+      }
+
+      .btn-position {
+        margin: 20px 0;
+        width: 95%;
+        @media (max-width: 319px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

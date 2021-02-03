@@ -1,0 +1,40 @@
+<main class="container">
+    <h3 class="head">Оплата</h3>
+    <div class="panel">
+        <form class="form" action="/" id="form-payment">
+            <div class="info-credit">
+                <p class="info-credit__text">Договір № 568046</p>
+                <p class="info-credit__text">Оплата кредиту на суму :
+                    <span class="amount-credit">1050 грн</span>
+                </p>
+            </div>
+
+            <div class="position-input">
+                <span class="number-card-user" id="number-card-user">4123567454565456</span>
+                <input class="form-input" required id="card_number" disabled name="card_num" type="tel">
+                <div class="payment-system-logo">
+                    <span class="icon-card icon-master-card" id="master_card"></span>
+                    <span class="icon-card icon-visa-card" id="visa_card"></span>
+                </div>
+            </div>
+            <div class="position-validity">
+                <div class="position-input validity" id="password-block">
+                    <label class="label" id="label-password">CVС код</label>
+                    <input class="form-input" required name="cvv2" type="password" inputmode="numeric" autocomplete="cc-csc" id="password_cvv" maxlength="3">
+                </div>
+            </div>
+            <div class="error-block">
+                <span class="error__text" id="err-system">*Системна помилка</span>
+                <span class="error__text" id="err-cvv">Будь ласка, введіть коректний CVС код</span>
+            </div>
+            <div class="information">
+                            <span class="information__text">
+                              У разі невдалого платежу зверніться до служби підтримки
+                            </span>
+            </div>
+            <div class="btn-position">
+                <button class="btn-primary" type="submit" id="click-payment">Оплатити</button>
+            </div>
+        </form>
+    </div>
+</main>

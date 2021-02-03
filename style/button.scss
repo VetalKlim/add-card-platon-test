@@ -1,0 +1,43 @@
+@import "variables";
+
+// ====== btn-primary =======
+.btn-primary {
+  width: 100%;
+  border: none;
+  color: $btn1-color-text !important;
+  padding-top: 20px;
+  border-radius: 4px;
+  padding-bottom: 19px;
+  background-size: 1px 80px;
+  transition: all 0.4s ease;
+  position: relative;
+  font: 400 16px/19px $mainFont;
+  z-index: 1;
+  background: $btn1-normal !important;
+  cursor: pointer;
+  min-height: 56px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    background-image: $btn1-hover;
+    z-index: -1;
+    transition: opacity 0.4s linear;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 1;
+    transition: all 0.4s ease-out;
+    outline: none;
+  }
+}

@@ -1,65 +1,15 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Додавання платіжної картки</title>
+    //= template/head/head.html
+    //= template/title/title-add-card-uk.html
 </head>
 <body>
 <div>
-    <header class="header">
-        <div class="container">
-            <div class="label">CREDITON</div>
-            <div class="lang">
-                <a class="lang__item" href="add-card-ru.html">RU</a>
-                <span class="line"></span>
-                <a class="lang__item" href="add-card-uk.html">UK</a>
-                <span class="line"></span>
-                <a class="lang__item" href="add-card-en.html">EN</a>
-            </div>
-        </div>
-    </header>
-    <main class="container">
-        <h3 class="head">Додавання платіжної картки</h3>
-        <div class="panel">
-            <form class="form" action="/" id="form-add-card">
-                <h4 class="text-number-card">Номер картки</h4>
-                <div class="position-input">
-                    <input class="form-input" required id="numberCard" name="card_num" inputmode="numeric" autocomplete="cc-number" type="tel">
-                    <div class="payment-system-logo">
-                        <span class="icon-card icon-master-card" id="master_card"></span>
-                        <span class="icon-card icon-visa-card" id="visa_card"></span>
-                    </div>
-                </div>
-                <div class="position-validity">
-                    <div class="position-input validity" id="year-block">
-                        <label class="label" id="label-validity">Термін дії</label>
-                        <input class="form-input" required name="card_exp_year" id="card_exp_year" inputmode="numeric" type="tel">
-                    </div>
-                    <div class="position-input validity" id="password-block">
-                        <label class="label" id="label-password">CVС код</label>
-                        <input class="form-input" required name="cvv2" type="password" inputmode="numeric" autocomplete="cc-csc" id="password_cvv" maxlength="3">
-                    </div>
-                </div>
-                <div class="error-block">
-                    <span class="error__text" id="err-system">*Системна помилка</span>
-                    <span class="error__text" id="err-card">Будь ласка, введіть правильний номер карти</span>
-                </div>
-                <div class="information">
-                    <span class="information__text">
-                        Для прив'язки карти ми проведемо платіж в розмірі 1.00 UAH, який буде повернений протягом 30
-                         хвилин
-                    </span>
-                </div>
-                <div class="btn-position">
-                    <button class="btn-primary" id="click-add-card">Додати карту</button>
-                </div>
-            </form>
-        </div>
-    </main>
+    //= template/header/header.html
+    //= template/add-card/main-add-card-uk.html
 </div>
 
-<script src="js/main.js"></script>
+//= template/footer.html
 </body>
 </html>
