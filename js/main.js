@@ -14017,12 +14017,17 @@ return jQuery;
         })
     };
     const checkFormAddCard = function () {
+        console.log('sss')
         $('#click-add-card').on('click', function () {
+
             $("#form-add-card").submit(function (event) {
-                if (btnCard && btnDate && btnPassword) {
-                    return;
-                }
-                event.preventDefault();
+                alert('ssss')
+                console.log(event)
+                return;
+                // if (btnCard && btnDate && btnPassword) {
+                //     return;
+                // }
+                // event.preventDefault();
             });
         })
     };
