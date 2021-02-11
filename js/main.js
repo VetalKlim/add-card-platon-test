@@ -14017,21 +14017,30 @@ return jQuery;
         })
     };
     const checkFormAddCard = function () {
-        console.log('sss')
         $('#click-add-card').on('click', function () {
-
             $("#form-add-card").submit(function (event) {
-                alert('ssss')
-                console.log(event)
-                return;
-                // if (btnCard && btnDate && btnPassword) {
-                //     return;
-                // }
-                // event.preventDefault();
+                if (btnCard && btnDate && btnPassword) {
+                    const date = new Date();
+                    const curr_year = date.getFullYear().toString().slice(0, 2).toString();
+                    const month = $('#card_exp_year').val().substr(0, 2);
+                    const year = curr_year + $('#card_exp_year').val().substr(2, 4);
+                    const input = $("<input>").attr("name", "card_exp_month").val(month).css({'display': 'none'});
+                    $('#form-add-card').append(input);
+                    $('#card_exp_year').inputmask('remove').removeAttr("disabled").val(year);
+                    $('#card_exp_year').val(year).inputmask("9999", {showMaskOnHover: false, removeMaskOnSubmit: true});
+                    $('#card_exp_month').remove();
+                    setTimeout(() => {
+                        $('#card_exp_year').val(month + curr_year).inputmask("99/99", {
+                            showMaskOnHover: false,
+                            removeMaskOnSubmit: true
+                        });
+                    }, 1000);
+                    return;
+                }
+                event.preventDefault();
             });
         })
     };
-
     maskInput();
     nextInput();
     hiddenLabel();
