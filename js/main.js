@@ -13828,6 +13828,7 @@ return jQuery;
     let btnCard = false;
     let btnDate = false;
     let btnPassword = false;
+    let click = 0;
     const hiddenLabel = function () {
         $('#numberCard').on('blur', function (e) {
             if (e.target.value.split('_').toString().length === 0 || e.target.value.split('_').join('').toString().length <= 16) {
@@ -13835,7 +13836,8 @@ return jQuery;
             }
         }).on('focus', function (e) {
             if (e.target.value.split('_')[0].toString().replace('/', '').length === 19) {
-                $('#numberCard').val('').addClass('error-validate');
+                // $('#numberCard').val('').addClass('error-validate');
+                // $('#numberCard').addClass('error-validate');
                 checkPaymentSystem(e.target.value.split('_')[0].toString().replace('/', ''));
                 btnCard = false;
             }
@@ -13848,7 +13850,8 @@ return jQuery;
             $('#label-validity').removeClass('visual').addClass('hidden');
             $('#card_exp_year').removeClass('error-validate');
             if (e.target.value.split('_')[0].toString().replace('/', '').length === 4) {
-                $('#card_exp_year').val('')
+                // $('#card_exp_year').val('')
+                $('#label-password').focus()
             }
         }).on('blur', function (e) {
             const date = e.target.value.split('_')[0].toString().replace('/', '');
@@ -14018,27 +14021,37 @@ return jQuery;
     };
     const checkFormAddCard = function () {
         $('#click-add-card').on('click', function () {
-            $("#form-add-card").submit(function (event) {
-                if (btnCard && btnDate && btnPassword) {
-                    const date = new Date();
-                    const curr_year = date.getFullYear().toString().slice(0, 2).toString();
-                    const month = $('#card_exp_year').val().substr(0, 2);
-                    const year = curr_year + $('#card_exp_year').val().substr(2, 4);
-                    const input = $("<input>").attr("name", "card_exp_month").val(month).css({'display': 'none'});
-                    $('#form-add-card').append(input);
-                    $('#card_exp_year').inputmask('remove').removeAttr("disabled").val(year);
-                    $('#card_exp_year').val(year).inputmask("9999", {showMaskOnHover: false, removeMaskOnSubmit: true});
-                    $('#card_exp_month').remove();
-                    setTimeout(() => {
-                        $('#card_exp_year').val(month + curr_year).inputmask("99/99", {
-                            showMaskOnHover: false,
-                            removeMaskOnSubmit: true
-                        });
-                    }, 1000);
-                    return;
-                }
-                event.preventDefault();
-            });
+            if (click === 0) {
+                click = click +
+                    $("#form-add-card").submit(function (event) {
+                        if (btnCard && btnDate && btnPassword) {
+                            try {
+                                const date = new Date();
+                                const curr_year = date.getFullYear().toString().slice(0, 2).toString();
+                                const month = $('#card_exp_year').val().substr(0, 2);
+                                const year = curr_year + $('#card_exp_year').val().substr(2, 4);
+                                const input = $("<input>").attr("name", "card_exp_month").val(month).css({'display': 'none'});
+                                $('#form-add-card').append(input);
+                                $('#card_exp_year').inputmask('remove').removeAttr("disabled").val(year);
+                                $('#card_exp_year').val(year).inputmask("9999", {
+                                    showMaskOnHover: false,
+                                    removeMaskOnSubmit: true
+                                });
+                                setTimeout(() => {
+                                    $('#card_exp_year').val(month + curr_year).inputmask("99/99", {
+                                        showMaskOnHover: false,
+                                        removeMaskOnSubmit: true
+                                    });
+                                }, 1000);
+                            } catch (e) {
+                                $("#form-add-card").trigger("reset");
+                            }
+                        } else {
+                            event.preventDefault();
+                        }
+                    });
+            }
+
         })
     };
     maskInput();
