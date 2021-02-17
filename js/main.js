@@ -13836,8 +13836,6 @@ return jQuery;
             }
         }).on('focus', function (e) {
             if (e.target.value.split('_')[0].toString().replace('/', '').length === 19) {
-                // $('#numberCard').val('').addClass('error-validate');
-                // $('#numberCard').addClass('error-validate');
                 checkPaymentSystem(e.target.value.split('_')[0].toString().replace('/', ''));
                 btnCard = false;
             }
@@ -13849,10 +13847,6 @@ return jQuery;
         $('#card_exp_year').on('focus', function (e) {
             $('#label-validity').removeClass('visual').addClass('hidden');
             $('#card_exp_year').removeClass('error-validate');
-            if (e.target.value.split('_')[0].toString().replace('/', '').length === 4) {
-                // $('#card_exp_year').val('')
-                $('#label-password').focus()
-            }
         }).on('blur', function (e) {
             const date = e.target.value.split('_')[0].toString().replace('/', '');
             if (e.target.value.length === 0) {
@@ -13888,6 +13882,8 @@ return jQuery;
             checkCard(e)
         }).on('input', function (e) {
             checkCard(e)
+        }).on('blur', function (e) {
+            checkCard(e)
         });
         $('#card_exp_year').on('change', function (e) {
             checkDate(e)
@@ -13898,23 +13894,19 @@ return jQuery;
     const checkDate = function (e) {
         const filterNumber = e.target.value.split('_')[0].toString().replace('/', '');
         validationDateCard(filterNumber);
-        if (filterNumber.length === 4) {
-            $('#password_cvv').focus();
-            btnDate = true;
-        } else {
-            btnDate = false;
-        }
+        btnDate = filterNumber.length === 4;
     };
     const checkCard = function (e) {
         const filterNumber = e.target.value.split('_')[0].toString().replace(/\s/g, '');
         checkPaymentSystem(filterNumber);
         validationNumberCard(filterNumber);
-        if (filterNumber.length === 16 && validationNumberCard(filterNumber)) {
-            $('#card_exp_year').focus();
-            btnCard = true;
-        } else {
-            btnCard = false;
-        }
+        btnCard = filterNumber.length === 16 && validationNumberCard(filterNumber);
+        setTimeout(() => {
+            if (filterNumber.length >= 15 && !validationNumberCard(filterNumber)) {
+                $('#numberCard').addClass('error-validate');
+                btnCard = false;
+            }
+        }, 500)
     };
 
     const maskInput = function () {
@@ -14051,7 +14043,6 @@ return jQuery;
                         }
                     });
             }
-
         })
     };
     maskInput();
