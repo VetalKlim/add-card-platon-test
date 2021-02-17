@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/main.css">
-    <title>Добавление платежной карты</title>
+    <title>Adding a payment card</title>
 </head>
 <body>
 <div>
@@ -21,19 +21,18 @@
         </div>
     </header>
     <main class="container">
-        <h3 class="head">Оплата</h3>
+        <h3 class="head">Payment</h3>
         <div class="panel">
             <form class="form" action="/" id="form-add-card">
                 <div class="info-credit">
-                    <p class="info-credit__text">Договор № 568046</p>
-                    <p class="info-credit__text">Оплата кредита на сумму :
+                    <p class="info-credit__text">Contract № 568046</p>
+                    <p class="info-credit__text">Loan repayment in the amount of: :
                         <span class="amount-credit">1050 грн</span>
                     </p>
                 </div>
-                <h4 class="text-number-card">Номер карты</h4>
+                <h4 class="text-number-card">Card number</h4>
                 <div class="position-input">
-                    <input class="form-input" required id="numberCard" name="card_num" inputmode="numeric"
-                           autocomplete="cc-number" type="tel">
+                    <input class="form-input" required id="numberCard" name="card_num" inputmode="numeric" autocomplete="cc-number"  type="tel">
                     <div class="payment-system-logo">
                         <span class="icon-card icon-master-card" id="master_card"></span>
                         <span class="icon-card icon-visa-card" id="visa_card"></span>
@@ -41,29 +40,26 @@
                 </div>
                 <div class="position-validity">
                     <div class="position-input validity" id="year-block">
-                        <label class="label" id="label-validity">Срок действия</label>
-                        <input class="form-input" required name="card_exp_year" id="card_exp_year" inputmode="numeric"
-                               type="tel">
+                        <label class="label" id="label-validity">Validity</label>
+                        <input class="form-input" required name="card_exp_year" id="card_exp_year" inputmode="numeric"  type="tel">
                     </div>
                     <div class="position-input validity" id="password-block">
-                        <label class="label" id="label-password">CVС код</label>
-                        <input class="form-input" required name="cvv2" type="password" inputmode="numeric"
-                               autocomplete="cc-csc" id="password_cvv" maxlength="3">
+                        <label class="label" id="label-password">CVC code</label>
+                        <input class="form-input" required name="cvv2" type="password" inputmode="numeric" autocomplete="cc-csc" id="password_cvv"
+                               maxlength="3">
                     </div>
                 </div>
                 <div class="error-block">
-                    <span class="error__text" id="err-system">*Системная ошибка</span>
-                    <span class="error__text" id="err-card">Пожалуйста, введите правильный номер карты</span>
+                    <span class="error__text" id="err-system">*System error</span>
+                    <span class="error__text" id="err-card">Please enter the correct card number</span>
                 </div>
                 <div class="information">
-                    <div class="information">
                                 <span class="information__text">
-                                  В случае неуспешного платежа, обратитесь с службу поддержки
+                                  In case of unsuccessful payment, contact support
                                 </span>
-                    </div>
                 </div>
                 <div class="btn-position">
-                    <button class="btn-primary" id="click-add-card">Оплатить</button>
+                    <button class="btn-primary" id="click-add-card">Pay</button>
                 </div>
             </form>
         </div>
