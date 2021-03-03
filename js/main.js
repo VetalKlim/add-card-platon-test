@@ -13837,7 +13837,6 @@ return jQuery;
         }).on('focus', function (e) {
             if (e.target.value.split('_')[0].toString().replace('/', '').length === 19) {
                 checkPaymentSystem(e.target.value.split('_')[0].toString().replace('/', ''));
-                btnCard = false;
             }
         });
         $('#year-block').on('click', function () {
@@ -13881,6 +13880,8 @@ return jQuery;
         $('#numberCard').on('change', function (e) {
             checkCard(e)
         }).on('input', function (e) {
+            checkCard(e)
+        }).on('focus', function (e) {
             checkCard(e)
         }).on('blur', function (e) {
             checkCard(e)
@@ -14016,7 +14017,14 @@ return jQuery;
             if (click === 0) {
                 click = click + 1;
                 $("#form-add-card").submit(function (event) {
-                    console.log(btnCard, btnDate, btnPassword)
+                    $('#numberCard').focus();
+                    if (!btnCard) {
+                        $('#numberCard').addClass('error-validate');
+                        $('#err-card').removeClass('hidden').addClass('visual');
+                    }
+                    if (!btnDate) {
+                        $('#card_exp_year').addClass('error-validate');
+                    }
                     if (btnCard && btnDate && btnPassword) {
                         const date = new Date();
                         const curr_year = date.getFullYear().toString().slice(0, 2).toString();
