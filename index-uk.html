@@ -35,7 +35,7 @@
                 <h4 class="text-number-card">Номер картки</h4>
                 <div class="position-input">
                     <input class="form-input" required id="numberCard" name="card_num" inputmode="numeric"
-                           autocomplete="cc-number" type="tel">
+                           autocomplete=off type="tel">
                     <div class="payment-system-logo">
                         <span class="icon-card icon-master-card" id="master_card"></span>
                         <span class="icon-card icon-visa-card" id="visa_card"></span>
@@ -44,13 +44,13 @@
                 <div class="position-validity">
                     <div class="position-input validity" id="year-block">
                         <label class="label" id="label-validity">Термін дії</label>
-                        <input class="form-input" required name="card_exp_year" id="card_exp_year" inputmode="numeric"
+                        <input class="form-input" required name="card_exp_year" id="card_exp_year" autocomplete=off inputmode="numeric"
                                type="tel">
                     </div>
                     <div class="position-input validity" id="password-block">
                         <label class="label" id="label-password">CVС код</label>
                         <input class="form-input" required name="cvv2" type="password" inputmode="numeric"
-                               autocomplete="cc-csc" id="password_cvv" maxlength="3">
+                               autocomplete=off id="password_cvv" maxlength="3">
                     </div>
                 </div>
                 <div class="error-block">

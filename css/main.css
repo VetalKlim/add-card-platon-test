@@ -212,13 +212,15 @@
           right: 5px;
           top: -49px !important; } }
       .container .panel .form .position-input .payment-system-logo .icon-card {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         display: none; }
       .container .panel .form .position-input .payment-system-logo .icon-master-card {
-        background: url("../img/mastercard.png") center center/contain no-repeat; }
+        background: url("../img/mastercard.svg") center center/contain no-repeat;
+        background-size: cover; }
       .container .panel .form .position-input .payment-system-logo .icon-visa-card {
-        background: url("../img/visacard.png") center center/contain no-repeat; }
+        background: url("../img/visacard.svg") center center/contain no-repeat;
+        background-size: cover; }
     .container .panel .form .position-validity {
       display: flex;
       justify-content: space-between;
