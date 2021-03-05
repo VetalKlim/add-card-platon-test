@@ -56,12 +56,12 @@
   display: block !important; }
 
 .error-validate {
-  border: 1px solid #EE224A !important;
-  color: #EE224A !important; }
+  border: 1px solid #f06979 !important;
+  color: #f06979 !important; }
 
 .header {
   height: 100px;
-  background: linear-gradient(90deg, #3094CA 0.26%, #3094CA 47.1%, #3094CA 99.8%); }
+  background: linear-gradient(90deg, #DFFFEA 0.26%, #DFFFEA 47.1%, #DFFFEA 99.8%); }
   @media (max-width: 576px) {
     .header {
       height: 60px; } }
@@ -75,7 +75,7 @@
         padding: 0 10px;
         height: 60px; } }
     .header .container .label {
-      color: #CFE0F4;
+      color: #737B76;
       font-size: 33px;
       justify-content: center;
       width: 57%;
@@ -89,8 +89,9 @@
       .header .container .label__icon {
         background: url("../img/logo.png") no-repeat;
         width: 50%;
-        height: 30px;
-        display: flex; }
+        height: 50px;
+        display: flex;
+        background-size: contain; }
         @media (max-width: 767px) {
           .header .container .label__icon {
             background-size: contain;
@@ -106,12 +107,12 @@
       margin: auto; }
       .header .container .lang .line {
         display: block;
-        border-left: 2px solid #CFE0F4;
+        border-left: 2px solid #737B76;
         height: 16px;
         position: relative;
         top: 2px; }
       .header .container .lang__item {
-        color: #CFE0F4;
+        color: #737B76;
         padding: 0 10px;
         font-family: CoreSansG, sans-serif;
         transition: all 0.3s ease-in-out;
@@ -119,7 +120,7 @@
         .header .container .lang__item:hover {
           transition: all 0.3s ease-in;
           cursor: pointer;
-          color: #FF95AA; }
+          color: #389A4C; }
 
 .position-input {
   position: relative;
@@ -148,6 +149,9 @@
     outline: 0;
     font-family: CoreSansG, sans-serif;
     padding: 20px 0 15px 20px; }
+    @media (max-width: 450px) {
+      .position-input .form-input {
+        padding: 20px 0 15px 15px; } }
 
 .container .head {
   font-size: 32px;
@@ -167,7 +171,7 @@
       padding: 20px 0 10px 0; } }
 
 .container .panel {
-  border: 1px solid #CFE0F4;
+  border: 1px solid #737B76;
   border-radius: 4px;
   min-height: 450px; }
   @media (max-width: 767px) {
@@ -202,25 +206,41 @@
       right: 28px;
       top: 0;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       margin: auto;
       align-items: center;
       height: 100%;
-      width: 15%; }
+      width: 25%; }
+      @media (max-width: 450px) {
+        .container .panel .form .position-input .payment-system-logo {
+          justify-content: flex-end;
+          right: 16px;
+          width: 25%; } }
+      @media (max-width: 420px) {
+        .container .panel .form .position-input .payment-system-logo {
+          justify-content: flex-end;
+          right: 10px;
+          width: 25%; } }
       @media (max-width: 370px) {
         .container .panel .form .position-input .payment-system-logo {
           right: 5px;
-          top: -49px !important; } }
+          top: -53px !important; } }
       .container .panel .form .position-input .payment-system-logo .icon-card {
         width: 60px;
         height: 60px;
-        display: none; }
+        display: none;
+        background-size: cover !important; }
+        @media (max-width: 450px) {
+          .container .panel .form .position-input .payment-system-logo .icon-card {
+            width: 80px;
+            height: 60px; } }
+        @media (max-width: 320px) {
+          .container .panel .form .position-input .payment-system-logo .icon-card {
+            background-size: contain !important; } }
       .container .panel .form .position-input .payment-system-logo .icon-master-card {
-        background: url("../img/mastercard.svg") center center/contain no-repeat;
-        background-size: cover; }
+        background: url("../img/mastercard.svg") center center/contain no-repeat; }
       .container .panel .form .position-input .payment-system-logo .icon-visa-card {
-        background: url("../img/visacard.svg") center center/contain no-repeat;
-        background-size: cover; }
+        background: url("../img/visacard.svg") center center/contain no-repeat; }
     .container .panel .form .position-validity {
       display: flex;
       justify-content: space-between;
@@ -241,7 +261,7 @@
       width: 95%;
       min-height: 20px; }
       .container .panel .form .error-block .error__text {
-        color: #EE224A;
+        color: #f06979;
         font-size: 14px;
         font-family: CoreSansG, sans-serif;
         display: none;
@@ -277,7 +297,7 @@
   position: relative;
   font: 400 16px/19px CoreSansG, sans-serif;
   z-index: 1;
-  background: linear-gradient(167.72deg, #006699 -33.07%, #006699 48.35%, #006699 139.94%) !important;
+  background: linear-gradient(167.72deg, #50AE55 -33.07%, #50AE55 48.35%, #50AE55 139.94%) !important;
   cursor: pointer;
   min-height: 56px; }
   .btn-primary::before {
@@ -288,7 +308,7 @@
     bottom: 0;
     left: 0;
     border-radius: 4px;
-    background-image: linear-gradient(351.95deg, #3094CA -48.61%, #3094CA 33.69%, #3094CA 126.27%);
+    background-image: linear-gradient(167.72deg, #A0CB89 -33.07%, #A0CB89 48.35%, #A0CB89 139.94%);
     z-index: -1;
     transition: opacity 0.4s linear;
     opacity: 0; }
@@ -301,6 +321,9 @@
 
 .info-credit {
   padding: 10px 0 20px 0; }
+  @media (max-width: 370px) {
+    .info-credit {
+      padding: 10px 0 30px 0; } }
   .info-credit__text {
     font-family: CoreSansG, sans-serif;
     font-size: 16px;
