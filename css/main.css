@@ -75,7 +75,7 @@
         padding: 0 10px;
         height: 60px; } }
     .header .container .label {
-      color: #FFFFFF;
+      color: #ccc;
       font-size: 33px;
       justify-content: center;
       width: 57%;
@@ -107,12 +107,12 @@
       margin: auto; }
       .header .container .lang .line {
         display: block;
-        border-left: 2px solid #FFFFFF;
+        border-left: 2px solid white;
         height: 16px;
         position: relative;
         top: 2px; }
       .header .container .lang__item {
-        color: #FFFFFF;
+        color: white;
         padding: 0 10px;
         font-family: CoreSansG, sans-serif;
         transition: all 0.3s ease-in-out;
@@ -171,7 +171,7 @@
       padding: 20px 0 10px 0; } }
 
 .container .panel {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ccc;
   border-radius: 4px;
   min-height: 450px; }
   @media (max-width: 767px) {
