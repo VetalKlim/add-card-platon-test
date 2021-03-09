@@ -61,7 +61,7 @@
 
 .header {
   height: 100px;
-  background: linear-gradient(90deg, #DFFFEA 0.26%, #DFFFEA 47.1%, #DFFFEA 99.8%); }
+  background: linear-gradient(90deg, #6B46B4 0.26%, #6B46B4 47.1%, #6B46B4 99.8%); }
   @media (max-width: 576px) {
     .header {
       height: 60px; } }
@@ -75,7 +75,7 @@
         padding: 0 10px;
         height: 60px; } }
     .header .container .label {
-      color: #737B76;
+      color: #FFFFFF;
       font-size: 33px;
       justify-content: center;
       width: 57%;
@@ -89,7 +89,7 @@
       .header .container .label__icon {
         background: url("../img/logo.png") no-repeat;
         width: 50%;
-        height: 50px;
+        height: 24px;
         display: flex;
         background-size: contain; }
         @media (max-width: 767px) {
@@ -107,12 +107,12 @@
       margin: auto; }
       .header .container .lang .line {
         display: block;
-        border-left: 2px solid #737B76;
+        border-left: 2px solid #FFFFFF;
         height: 16px;
         position: relative;
         top: 2px; }
       .header .container .lang__item {
-        color: #737B76;
+        color: #FFFFFF;
         padding: 0 10px;
         font-family: CoreSansG, sans-serif;
         transition: all 0.3s ease-in-out;
@@ -120,7 +120,7 @@
         .header .container .lang__item:hover {
           transition: all 0.3s ease-in;
           cursor: pointer;
-          color: #389A4C; }
+          color: #FFC33A; }
 
 .position-input {
   position: relative;
@@ -171,7 +171,7 @@
       padding: 20px 0 10px 0; } }
 
 .container .panel {
-  border: 1px solid #737B76;
+  border: 1px solid #FFFFFF;
   border-radius: 4px;
   min-height: 450px; }
   @media (max-width: 767px) {
@@ -224,7 +224,7 @@
       @media (max-width: 370px) {
         .container .panel .form .position-input .payment-system-logo {
           right: 5px;
-          top: -53px !important; } }
+          top: -51px !important; } }
       .container .panel .form .position-input .payment-system-logo .icon-card {
         width: 60px;
         height: 60px;
@@ -239,8 +239,14 @@
             background-size: contain !important; } }
       .container .panel .form .position-input .payment-system-logo .icon-master-card {
         background: url("../img/mastercard.svg") center center/contain no-repeat; }
+        @media (max-width: 370px) {
+          .container .panel .form .position-input .payment-system-logo .icon-master-card {
+            transform: scale(0.9); } }
       .container .panel .form .position-input .payment-system-logo .icon-visa-card {
         background: url("../img/visacard.svg") center center/contain no-repeat; }
+        @media (max-width: 370px) {
+          .container .panel .form .position-input .payment-system-logo .icon-visa-card {
+            transform: scale(0.9); } }
     .container .panel .form .position-validity {
       display: flex;
       justify-content: space-between;
@@ -297,7 +303,7 @@
   position: relative;
   font: 400 16px/19px CoreSansG, sans-serif;
   z-index: 1;
-  background: linear-gradient(167.72deg, #50AE55 -33.07%, #50AE55 48.35%, #50AE55 139.94%) !important;
+  background: linear-gradient(90deg, #FFC43B -0.11%, #FF9826 66.17%) !important;
   cursor: pointer;
   min-height: 56px; }
   .btn-primary::before {
@@ -308,7 +314,7 @@
     bottom: 0;
     left: 0;
     border-radius: 4px;
-    background-image: linear-gradient(167.72deg, #A0CB89 -33.07%, #A0CB89 48.35%, #A0CB89 139.94%);
+    background-image: linear-gradient(351.95deg, #FFC33A -48.61%, #FFC33A 33.69%, #FFC33A 126.27%);
     z-index: -1;
     transition: opacity 0.4s linear;
     opacity: 0; }
